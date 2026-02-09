@@ -103,14 +103,14 @@ function HeroSection() {
                 ))}
             </div>
 
-            <motion.div style={{ y, opacity }} className="container mx-auto px-6 relative z-10 pt-24">
+            <motion.div style={{ y, opacity }} className="container mx-auto px-6 relative z-10 pt-36 md:pt-44">
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Main Headline */}
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-white mb-6"
+                        className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight font-display"
                     >
                         Manifest Your <span className="gradient-text-gold">Dreams</span> Into <span className="gradient-text">Reality</span>
                     </motion.h1>
@@ -120,7 +120,7 @@ function HeroSection() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto"
+                        className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed"
                     >
                         Join 2,000+ students mastering the I Am Power Flow™ method
                     </motion.p>
@@ -234,10 +234,10 @@ function MethodologySection() {
                     viewport={{ once: true }}
                     className="text-center max-w-3xl mx-auto mb-16"
                 >
-                    <h2 className="text-neutral-900 mb-4 uppercase tracking-wide text-sm font-semibold text-neutral-500">
+                    <h2 className="text-neutral-900 mb-4 uppercase tracking-wide text-sm font-semibold text-neutral-500 text-center">
                         The 3 Pillars of Transformation
                     </h2>
-                    <p className="text-neutral-600 text-lg">
+                    <p className="text-neutral-600 text-lg text-center">
                         Wealth, Relationships, and Health. The I Am Power Flow™ framework for lasting change.
                     </p>
                 </motion.div>
@@ -305,18 +305,18 @@ function VideoTestimonialCarousel() {
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto mb-12">
                     <span className="inline-block px-4 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm font-medium mb-4">Watch & Believe</span>
                     <h2 className="text-neutral-900 mb-4">Featured <span className="gradient-text-gold">Video Testimonials</span></h2>
-                    <p className="text-neutral-600 text-lg">Hear directly from students who transformed their lives with the I Am Power Flow™ method.</p>
+                    <p className="text-neutral-600 text-lg text-center">Hear directly from students who transformed their lives with the I Am Power Flow™ method.</p>
                 </motion.div>
-                <div className="relative">
+                <div className="relative max-w-4xl mx-auto">
                     <button type="button" onClick={() => scroll('l')} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-lg border border-neutral-200 flex items-center justify-center text-neutral-700 hover:bg-neutral-50 -translate-x-2" aria-label="Previous">
                         <ChevronLeft className="w-6 h-6" />
                     </button>
                     <button type="button" onClick={() => scroll('r')} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-lg border border-neutral-200 flex items-center justify-center text-neutral-700 hover:bg-neutral-50 translate-x-2" aria-label="Next">
                         <ChevronRight className="w-6 h-6" />
                     </button>
-                    <div ref={scrollRef} className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" style={{ scrollbarWidth: 'none' }}>
+                    <div ref={scrollRef} className="flex gap-6 justify-center overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" style={{ scrollbarWidth: 'none' }}>
                         {VIDEO_TESTIMONIALS.map((v) => (
-                            <div key={v.id} className="flex-shrink-0 w-[min(100%,320px)] snap-center rounded-2xl overflow-hidden border border-neutral-100 shadow-lg">
+                            <div key={v.id} className="flex-shrink-0 w-[min(100%,340px)] snap-center rounded-2xl overflow-hidden border border-neutral-100 shadow-lg">
                                 <div className="aspect-video bg-neutral-900 relative">
                                     <iframe title={v.title} className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/${v.ytId}?rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
                                 </div>
@@ -349,7 +349,7 @@ function InstagramSection() {
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto mb-12">
                     <span className="inline-block px-4 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium mb-4">@magicalneer</span>
                     <h2 className="text-neutral-900 mb-4">Instagram Feed</h2>
-                    <p className="text-neutral-600 text-lg">Daily inspiration, reels, and community. Follow along.</p>
+                    <p className="text-neutral-600 text-lg text-center">Daily inspiration, reels, and community. Follow along.</p>
                 </motion.div>
                 <div className="max-w-4xl mx-auto">
                     <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
@@ -439,10 +439,10 @@ function PricingSection() {
                     viewport={{ once: true }}
                     className="text-center max-w-3xl mx-auto mb-12"
                 >
-                    <h2 className="text-neutral-900 mb-4 uppercase tracking-wide text-sm font-semibold text-neutral-500">
+                    <h2 className="text-neutral-900 mb-4 uppercase tracking-wide text-sm font-semibold text-neutral-500 text-center">
                         Choose Your Path
                     </h2>
-                    <p className="text-neutral-600 text-lg">
+                    <p className="text-neutral-600 text-lg text-center">
                         From free access to 1:1 coaching. Every path includes the I Am Power Flow™ method.
                     </p>
                 </motion.div>

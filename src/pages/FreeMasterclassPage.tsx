@@ -13,42 +13,44 @@ export default function FreeMasterclassPage() {
     return (
         <div className="min-h-screen bg-neutral-900 text-white">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-20 overflow-hidden">
+            <section className="relative pt-32 pb-20 overflow-hidden">
                 {/* Background image placeholder - using the energy flow image */}
                 <div className="absolute inset-0 opacity-20">
                     <img src="/images/energy-flow.png" alt="Background" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/80 via-neutral-900/90 to-neutral-900"></div>
 
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container mx-auto px-6 relative z-10 pt-20">
                     <div className="max-w-4xl mx-auto text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <span className="inline-block py-1 px-3 rounded-full bg-secondary-500/20 text-secondary-400 font-semibold text-sm mb-6 border border-secondary-500/30">
+                            <span className="inline-block py-2 px-4 rounded-full bg-secondary-500/20 text-secondary-400 font-semibold text-sm mb-8 border border-secondary-500/30">
                                 FREE EXCLUSIVE MASTERCLASS
                             </span>
-                            <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
                                 Unlock the <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-300 to-secondary-500">Divine Code</span> to Manifesting Abundance
                             </h1>
-                            <p className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto">
+                            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Stop chasing and start attracting. Learn the 3-step ancient energy secret that overrides limiting beliefs instantly.
                             </p>
 
-                            {/* Video Placeholder */}
-                            <div className="relative aspect-video max-w-3xl mx-auto bg-neutral-800 rounded-2xl border border-neutral-700 shadow-2xl overflow-hidden group cursor-pointer mb-12">
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center pl-1 group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(124,58,237,0.5)]">
-                                        <Play className="w-8 h-8 text-white fill-current" />
+                            {/* Video Placeholder - Centered */}
+                            <div className="flex justify-center">
+                                <div className="relative aspect-video w-full max-w-3xl bg-neutral-800 rounded-2xl border border-neutral-700 shadow-2xl overflow-hidden group cursor-pointer mb-12">
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center pl-1 group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(124,58,237,0.5)]">
+                                            <Play className="w-8 h-8 text-white fill-current" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm p-4 rounded-lg">
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <div className="font-bold text-white">Masterclass Preview</div>
-                                            <div className="text-xs text-neutral-400">Duration: 2 min</div>
+                                    <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm p-4 rounded-lg">
+                                        <div className="flex items-center justify-between">
+                                            <div>
+                                                <div className="font-bold text-white">Masterclass Preview</div>
+                                                <div className="text-xs text-neutral-400">Duration: 2 min</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

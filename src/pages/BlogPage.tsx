@@ -69,15 +69,16 @@ export default function BlogPage() {
     return (
         <>
             {/* Header */}
-            <div className="bg-neutral-900 text-white pt-32 pb-20 relative overflow-hidden">
+            <div className="bg-neutral-900 text-white pt-32 pb-16 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-neutral-900 to-neutral-900 opacity-90"></div>
-                <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="container mx-auto px-6 relative z-10 pt-20">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
+                        className="text-center"
                     >
-                        <h1 className="font-display text-5xl font-bold mb-6">Wisdom & <span className="text-secondary-400">Insights</span></h1>
-                        <p className="text-xl text-neutral-300 max-w-2xl mx-auto mb-10">
+                        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-8">Wisdom & <span className="text-secondary-400">Insights</span></h1>
+                        <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed">
                             Deep dive into the world of manifestation, energy healing, and spiritual growth.
                         </p>
 

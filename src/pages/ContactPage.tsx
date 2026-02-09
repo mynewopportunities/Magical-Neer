@@ -50,7 +50,7 @@ const faqs = [
 // Hero Section
 function ContactHero() {
     return (
-        <section className="relative py-32 gradient-hero overflow-hidden">
+        <section className="relative pt-32 pb-16 gradient-hero overflow-hidden">
             <div className="absolute inset-0">
                 <motion.div
                     className="absolute top-20 right-20 w-72 h-72 bg-accent-500/20 rounded-full blur-3xl"
@@ -64,21 +64,22 @@ function ContactHero() {
                 />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="container mx-auto px-6 relative z-10 pt-20">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
+                    className="text-center"
                 >
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
+                    <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-8">
                         <MessageCircle className="w-4 h-4 text-secondary-400" />
                         We'd Love to Hear From You
                     </span>
 
-                    <h1 className="text-white mb-6">
+                    <h1 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight font-display">
                         Let's <span className="gradient-text-gold">Connect</span>
                     </h1>
 
-                    <p className="text-white/80 text-xl max-w-2xl mx-auto">
+                    <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                         Have questions about our programs? Ready to start your transformation? Reach out and we'll get back to you within 24 hours.
                     </p>
                 </motion.div>
@@ -316,33 +317,6 @@ function ContactFormSection() {
     );
 }
 
-// Calendly embed – discovery calls
-function CalendlySection() {
-    return (
-        <section className="section bg-neutral-50">
-            <div className="container mx-auto px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center max-w-3xl mx-auto mb-10"
-                >
-                    <span className="inline-block px-4 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4">Discovery Calls</span>
-                    <h2 className="text-neutral-900 mb-4">Schedule a <span className="gradient-text">Free Call</span></h2>
-                    <p className="text-neutral-600">Pick a time that works for you. We’ll send SMS/email reminders.</p>
-                </motion.div>
-                <div className="rounded-2xl overflow-hidden border border-neutral-200 shadow-lg bg-white">
-                    <iframe
-                        title="Calendly – Magical Neer Discovery Call"
-                        src="https://calendly.com/magicalneer/discovery-call?hide_gdpr_banner=1"
-                        className="w-full h-[700px] min-h-[600px] border-0"
-                    />
-                </div>
-            </div>
-        </section>
-    );
-}
-
 // FAQ Section
 function FAQSection() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -383,7 +357,9 @@ function FAQSection() {
                                     }`}
                             >
                                 <div className="flex items-center justify-between">
-                                    <h3 className="font-semibold text-neutral-900 pr-4">{faq.question}</h3>
+                                    <h3 className="font-semibold text-neutral-900 pr-4 text-base md:text-lg leading-relaxed">
+                                        {faq.question}
+                                    </h3>
                                     <ChevronDown
                                         className={`w-5 h-5 text-neutral-500 transition-transform flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''
                                             }`}
@@ -424,7 +400,6 @@ export default function ContactPage() {
         <>
             <ContactHero />
             <ContactFormSection />
-            <CalendlySection />
             <FAQSection />
         </>
     );

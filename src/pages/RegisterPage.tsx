@@ -13,7 +13,7 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen flex">
+        <div className="min-h-screen flex pt-24">
             <div className="flex-1 flex items-center justify-center p-8 overflow-y-auto">
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md py-8">
                     <Link to="/" className="flex items-center gap-2 mb-8">

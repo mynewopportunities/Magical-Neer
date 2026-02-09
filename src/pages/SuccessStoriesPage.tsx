@@ -132,7 +132,7 @@ const testimonials = [
 // Hero Section
 function SuccessStoriesHero() {
     return (
-        <section className="relative py-32 gradient-hero overflow-hidden">
+        <section className="relative pt-32 pb-20 gradient-hero overflow-hidden">
             <div className="absolute inset-0">
                 <motion.div
                     className="absolute top-20 right-20 w-72 h-72 bg-secondary-500/20 rounded-full blur-3xl"
@@ -146,37 +146,40 @@ function SuccessStoriesHero() {
                 />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="container mx-auto px-6 relative z-10 pt-24">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
+                    className="text-center"
                 >
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
+                    <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-8">
                         <Star className="w-4 h-4 text-secondary-400 fill-secondary-400" />
                         Real Results from Real People
                     </span>
 
-                    <h1 className="text-white mb-6">
-                        Lives <span className="gradient-text-gold">Transformed</span>
-                    </h1>
+                    <div className="max-w-4xl mx-auto mb-10">
+                        <h1 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight font-display">
+                            Lives <span className="gradient-text-gold">Transformed</span>
+                        </h1>
 
-                    <p className="text-white/80 text-xl max-w-2xl mx-auto mb-8">
-                        Don't just take our word for it. See how the I Am Power Flow™ methodology has helped thousands manifest their dreams into reality.
-                    </p>
+                        <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                            Don't just take our word for it. See how the I Am Power Flow™ methodology has helped thousands manifest their dreams into reality.
+                        </p>
+                    </div>
 
-                    <div className="flex items-center justify-center gap-8">
-                        <div className="text-center">
-                            <div className="font-display text-4xl font-bold text-white">2,847+</div>
+                    <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-12 pt-8 border-t border-white/10">
+                        <div className="text-center px-4">
+                            <div className="font-display text-3xl md:text-4xl font-bold text-white mb-1">2,847+</div>
                             <div className="text-white/60 text-sm">Success Stories</div>
                         </div>
-                        <div className="w-px h-12 bg-white/20" />
-                        <div className="text-center">
-                            <div className="font-display text-4xl font-bold text-white">4.9/5</div>
+                        <div className="hidden md:block w-px h-14 bg-white/20" />
+                        <div className="text-center px-4">
+                            <div className="font-display text-3xl md:text-4xl font-bold text-white mb-1">4.9/5</div>
                             <div className="text-white/60 text-sm">Average Rating</div>
                         </div>
-                        <div className="w-px h-12 bg-white/20" />
-                        <div className="text-center">
-                            <div className="font-display text-4xl font-bold text-white">98%</div>
+                        <div className="hidden md:block w-px h-14 bg-white/20" />
+                        <div className="text-center px-4">
+                            <div className="font-display text-3xl md:text-4xl font-bold text-white mb-1">98%</div>
                             <div className="text-white/60 text-sm">Satisfaction Rate</div>
                         </div>
                     </div>
@@ -196,14 +199,14 @@ function TestimonialsGrid() {
             : testimonials.filter((t) => t.category === activeCategory);
 
     return (
-        <section className="section bg-white">
+        <section className="py-20 lg:py-24 bg-white">
             <div className="container mx-auto px-6">
                 {/* Category Filter */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="flex flex-wrap justify-center gap-3 mb-12"
+                    className="flex flex-wrap justify-center gap-3 mb-16"
                 >
                     {categories.map((category) => (
                         <button
@@ -309,12 +312,12 @@ function VideoTestimonials() {
                     <h2 className="text-white mb-4">
                         Hear Their <span className="gradient-text-gold">Stories</span>
                     </h2>
-                    <p className="text-white/70 text-lg">
+                    <p className="text-white text-lg text-center">
                         Watch video testimonials from our students sharing their transformation journeys.
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     {[1, 2, 3].map((item, index) => (
                         <motion.div
                             key={item}
@@ -331,7 +334,7 @@ function VideoTestimonials() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="mt-4">
+                            <div className="mt-4 text-center">
                                 <div className="font-semibold text-white">Transformation Story #{item}</div>
                                 <div className="text-white/60 text-sm">Watch the full journey</div>
                             </div>

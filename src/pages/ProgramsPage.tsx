@@ -15,7 +15,7 @@ import {
 // Hero Section
 function ProgramsHero() {
     return (
-        <section className="relative py-24 gradient-hero overflow-hidden">
+        <section className="relative pt-32 pb-16 gradient-hero overflow-hidden">
             <div className="absolute inset-0">
                 <motion.div
                     className="absolute top-20 left-20 w-72 h-72 bg-secondary-500/20 rounded-full blur-3xl"
@@ -29,12 +29,12 @@ function ProgramsHero() {
                 />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 text-center">
-                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-                    <h1 className="text-white mb-4">
+            <div className="container mx-auto px-6 relative z-10 pt-20">
+                <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center">
+                    <h1 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight font-display">
                         Choose Your <span className="gradient-text-gold">Transformation Path</span>
                     </h1>
-                    <p className="text-white/80 text-xl max-w-2xl mx-auto">
+                    <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                         Select the plan that aligns with your manifestation journey
                     </p>
                 </motion.div>
@@ -142,9 +142,9 @@ function FAQSection() {
     return (
         <section className="section bg-neutral-50">
             <div className="container mx-auto px-6">
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
-                    <h2 className="text-neutral-900 mb-2">Accordion FAQ</h2>
-                    <p className="text-neutral-600">Common questions about plans and access.</p>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto mb-12">
+                    <h2 className="text-neutral-900 mb-2">Frequently Asked Questions</h2>
+                    <p className="text-neutral-600 text-center">Common questions about plans and access.</p>
                 </motion.div>
                 <div className="max-w-2xl mx-auto space-y-3">
                     {programFaqs.map((faq, index) => (
@@ -227,7 +227,7 @@ function CTASection() {
                         </div>
 
                         <h2 className="text-white mb-4">Not Sure Which Program Is Right?</h2>
-                        <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                        <p className="text-white text-lg mb-10 max-w-2xl mx-auto text-center">
                             Watch our free masterclass to discover the I Am Power Flow™ methodology and find the perfect program for your journey.
                         </p>
 

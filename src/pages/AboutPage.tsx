@@ -25,7 +25,7 @@ const GALLERY_IMAGES = [
 // Hero Section
 function AboutHero() {
     return (
-        <section className="relative min-h-[70vh] flex items-center gradient-hero overflow-hidden">
+        <section className="relative min-h-[60vh] flex items-center gradient-hero overflow-hidden pt-20">
             {/* Background Elements */}
             <div className="absolute inset-0">
                 <motion.div
@@ -40,8 +40,8 @@ function AboutHero() {
                 />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 pt-24">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-6 relative z-10 pt-28 pb-12">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -52,8 +52,9 @@ function AboutHero() {
                         <div className="relative">
                             {/* Main Image Container */}
                             <div className="relative w-full max-w-lg mx-auto aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
+                                {/* Primary portrait image for About page */}
                                 <img
-                                    src="/images/neer-portrait.png"
+                                    src="/images/neer-about.png"
                                     alt="Neer - Spiritual Guide"
                                     className="w-full h-full object-cover"
                                 />
@@ -95,11 +96,11 @@ function AboutHero() {
                             Hi, I'm <span className="gradient-text-gold">Neer</span>
                         </h1>
 
-                        <p className="text-white/80 text-lg mb-6">
+                        <p className="text-white text-lg mb-6">
                             India's Leading Action-Based Manifestation Coach & Founder of the I Am Power Flow™ methodology. My mission is to guide you to unlock your potential using the ancient wisdom of <em>"Yatha Dhrusti thata Shrusti"</em>.
                         </p>
 
-                        <p className="text-white/70 mb-8">
+                        <p className="text-white mb-8">
                             From a successful corporate career to a profound spiritual awakening, I've walked the path of transformation. Now, with over 200,000+ students mentored, I'm here to help you bridge the gap between where you are and where you deserve to be.
                         </p>
 
@@ -176,7 +177,7 @@ function JourneySection() {
                     <h2 className="text-neutral-900 mb-4">
                         From Struggle to <span className="gradient-text">Spiritual Awakening</span>
                     </h2>
-                    <p className="text-neutral-600 text-lg">
+                    <p className="text-neutral-600 text-lg text-center">
                         Every great transformation begins with a single step. Here's how my journey unfolded.
                     </p>
                 </motion.div>
@@ -309,7 +310,7 @@ function VideoIntroSection() {
                 >
                     <span className="inline-block px-4 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium mb-4">Watch</span>
                     <h2 className="text-neutral-900 mb-4">A Short <span className="gradient-text">Introduction</span></h2>
-                    <p className="text-neutral-600 text-lg">Hear from Neer in this brief video about the I Am Power Flow™ journey.</p>
+                    <p className="text-neutral-600 text-lg text-center">Hear from Neer in this brief video about the I Am Power Flow™ journey.</p>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -347,7 +348,7 @@ function GallerySection() {
                 >
                     <span className="inline-block px-4 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4">Gallery</span>
                     <h2 className="text-neutral-900 mb-4">Moments & <span className="gradient-text">Journey</span></h2>
-                    <p className="text-neutral-600 text-lg">A glimpse into retreats, sessions, and community.</p>
+                    <p className="text-neutral-600 text-lg text-center">A glimpse into retreats, sessions, and community.</p>
                 </motion.div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {GALLERY_IMAGES.map((img, index) => (
@@ -463,13 +464,13 @@ function CTASection() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-3xl p-8 md:p-12 text-center text-white"
+                    className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-3xl px-8 md:px-12 py-10 md:py-14 text-center text-white"
                 >
                     <h2 className="text-white mb-4">Ready to Begin Your Transformation?</h2>
-                    <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                    <p className="text-white text-lg mb-10 max-w-2xl mx-auto text-center">
                         Join me on this sacred journey of self-discovery and manifestation. Your abundant life is waiting.
                     </p>
-                    <Link to="/book-call" className="btn btn-secondary text-lg px-8 py-4">
+                    <Link to="/book-call" className="btn btn-secondary text-lg px-8 py-4 mt-2">
                         Book Discovery Call <ArrowRight className="w-5 h-5" />
                     </Link>
                 </motion.div>

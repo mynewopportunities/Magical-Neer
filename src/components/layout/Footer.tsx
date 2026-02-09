@@ -59,7 +59,7 @@ export default function Footer() {
                     <h3 className="font-display text-3xl md:text-4xl font-bold mb-4">
                         Start Your <span className="gradient-text">Manifestation</span> Journey
                     </h3>
-                    <p className="text-neutral-400 mb-8 max-w-xl mx-auto">
+                    <p className="text-neutral-400 mb-8 max-w-xl mx-auto text-center">
                         Join 10,000+ manifestors receiving weekly abundance tips, healing practices, and exclusive offers.
                     </p>
                     <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">

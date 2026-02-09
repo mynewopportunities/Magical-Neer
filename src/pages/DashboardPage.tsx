@@ -4,7 +4,7 @@ import { BookOpen, Play, Calendar } from 'lucide-react';
 export default function DashboardPage() {
     return (
         <div className="min-h-screen bg-neutral-50">
-            <div className="container mx-auto px-4 py-8">
+            <div className="container mx-auto px-4 pt-28 pb-8">
                 <h1 className="text-2xl font-display font-bold text-neutral-900 mb-2">Dashboard</h1>
                 <p className="text-neutral-600 mb-8">Welcome back! Continue your journey below.</p>
 

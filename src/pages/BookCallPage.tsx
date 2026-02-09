@@ -23,7 +23,7 @@ export default function BookCallPage() {
 
     return (
         <>
-            <section className="relative py-24 gradient-hero overflow-hidden">
+            <section className="relative pt-32 pb-16 gradient-hero overflow-hidden">
                 <div className="absolute inset-0">
                     <motion.div
                         className="absolute top-20 right-20 w-72 h-72 bg-secondary-500/20 rounded-full blur-3xl"
@@ -36,16 +36,16 @@ export default function BookCallPage() {
                         transition={{ duration: 6, repeat: Infinity }}
                     />
                 </div>
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-                        <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
+                <div className="container mx-auto px-6 relative z-10 pt-20">
+                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center">
+                        <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-8">
                             <Calendar className="w-4 h-4 text-secondary-400" />
                             Free Discovery Call
                         </span>
-                        <h1 className="text-white mb-6">
+                        <h1 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight font-display">
                             Book Your <span className="gradient-text-gold">Discovery Call</span>
                         </h1>
-                        <p className="text-white/80 text-xl max-w-2xl mx-auto">
+                        <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                             A 15–20 minute call to understand your goals and find the right program for you. No pressure, just clarity.
                         </p>
                     </motion.div>

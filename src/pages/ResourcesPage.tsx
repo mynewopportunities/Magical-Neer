@@ -125,7 +125,7 @@ const blogPosts = [
 // Hero Section
 function ResourcesHero() {
     return (
-        <section className="relative py-32 gradient-hero overflow-hidden">
+        <section className="relative pt-32 pb-16 gradient-hero overflow-hidden">
             <div className="absolute inset-0">
                 <motion.div
                     className="absolute top-20 left-20 w-72 h-72 bg-accent-500/20 rounded-full blur-3xl"
@@ -139,23 +139,26 @@ function ResourcesHero() {
                 />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="container mx-auto px-6 relative z-10 pt-24">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
+                    className="text-center"
                 >
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6">
+                    <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-8">
                         <Gift className="w-4 h-4 text-secondary-400" />
                         Lead Magnets
                     </span>
 
-                    <h1 className="text-white mb-6">
-                        Start Your Journey <span className="gradient-text-gold">Free</span>
-                    </h1>
+                    <div className="max-w-3xl mx-auto">
+                        <h1 className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight font-display">
+                            Start Your Journey <span className="gradient-text-gold">Free</span>
+                        </h1>
 
-                    <p className="text-white/80 text-xl max-w-2xl mx-auto">
-                        Free downloads, guided meditations, workbooks, and more to support your manifestation journey.
-                    </p>
+                        <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                            Free downloads, guided meditations, workbooks, and more to support your manifestation journey.
+                        </p>
+                    </div>
                 </motion.div>
             </div>
         </section>
@@ -313,7 +316,7 @@ function FreeResourcesSection() {
                     onClose={() => setGatedResource(null)}
                     resourceTitle={gatedResource.title}
                     resourceType={gatedResource.type}
-                    onSuccess={() => {}}
+                    onSuccess={() => { }}
                 />
             )}
         </section>
@@ -471,7 +474,7 @@ function NewsletterCTA() {
                     className="max-w-2xl mx-auto text-center text-white"
                 >
                     <h2 className="text-white mb-4">Get Weekly Manifestation Tips</h2>
-                    <p className="text-white/80 text-lg mb-8">
+                    <p className="text-white text-lg mb-8 text-center">
                         Join 10,000+ manifestors receiving exclusive tips, resources, and inspiration every week.
                     </p>
 
@@ -486,7 +489,7 @@ function NewsletterCTA() {
                         </button>
                     </form>
 
-                    <p className="text-white/60 text-sm mt-4">
+                    <p className="text-white/60 text-sm mt-4 text-center">
                         No spam, unsubscribe anytime
                     </p>
                 </motion.div>

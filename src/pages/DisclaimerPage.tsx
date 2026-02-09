@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 
 function LegalHeader({ title, subtitle }: { title: string; subtitle: string }) {
     return (
-        <div className="bg-neutral-900 text-white py-20 relative overflow-hidden">
+        <div className="bg-neutral-900 text-white pt-32 pb-16 relative overflow-hidden">
             <div className="absolute inset-0">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-primary-900/40 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-900/30 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
             </div>
-            <div className="container mx-auto px-6 relative z-10">
-                <Link to="/" className="inline-flex items-center text-white/60 hover:text-white mb-6 transition-colors">
+            <div className="container mx-auto px-6 relative z-10 pt-16">
+                <Link to="/" className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors">
                     <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
                 </Link>
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                    <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-                    <p className="text-xl text-white/80 max-w-2xl">{subtitle}</p>
+                    <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-5">{title}</h1>
+                    <p className="text-xl text-white/80 max-w-2xl leading-relaxed">{subtitle}</p>
                 </motion.div>
             </div>
         </div>

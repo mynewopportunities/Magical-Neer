@@ -82,7 +82,7 @@ export default function Header() {
                             >
                                 <Link
                                     to={item.href}
-                                    className={`flex items-center gap-1.5 px-3 py-2 rounded-lg font-medium text-lg transition-all ${isScrolled
+                                    className={`flex items-center gap-1.5 px-3 py-2 rounded-lg font-medium text-base transition-all ${isScrolled
                                         ? 'text-neutral-600 hover:text-primary-600'
                                         : 'text-white/90 hover:text-white'
                                         } ${location.pathname === item.href ? 'text-primary-500' : ''}`}
@@ -96,28 +96,33 @@ export default function Header() {
                                     )}
                                 </Link>
 
-                                {/* Dropdown Menu */}
+                                {/* Dropdown Menu – relaxed spacing and typography */}
                                 <AnimatePresence>
                                     {item.children && activeDropdown === item.label && (
                                         <motion.div
-                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            initial={{ opacity: 0, y: 8, scale: 0.98 }}
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
-                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            exit={{ opacity: 0, y: 8, scale: 0.98 }}
                                             transition={{ duration: 0.2 }}
-                                            className="absolute top-full left-0 mt-4 w-80 bg-white rounded-2xl shadow-xl border border-neutral-100 overflow-hidden p-2"
+                                            className="absolute top-full left-0 mt-4 w-[360px] bg-white rounded-2xl shadow-2xl border border-neutral-200 p-5"
                                         >
-                                            {item.children.map((child) => (
-                                                <Link
-                                                    key={child.href}
-                                                    to={child.href}
-                                                    className="block px-4 py-3 rounded-xl hover:bg-primary-50 transition-colors"
-                                                >
-                                                    <span className="font-bold text-neutral-900 block mb-1">{child.label}</span>
-                                                    {child.description && (
-                                                        <p className="text-sm text-neutral-500 leading-snug">{child.description}</p>
-                                                    )}
-                                                </Link>
-                                            ))}
+                                            <div className="space-y-1">
+                                                {item.children.map((child) => (
+                                                    <Link
+                                                        key={child.href}
+                                                        to={child.href}
+                                                        className="block px-5 py-4 rounded-xl hover:bg-primary-50/80 transition-colors">
+                                                        <span className="font-semibold text-neutral-900 text-[15px] block leading-snug mb-1.5">
+                                                            {child.label}
+                                                        </span>
+                                                        {child.description && (
+                                                            <p className="text-sm text-neutral-500 leading-relaxed">
+                                                                {child.description}
+                                                            </p>
+                                                        )}
+                                                    </Link>
+                                                ))}
+                                            </div>
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
@@ -129,7 +134,7 @@ export default function Header() {
                     <div className="hidden xl:flex items-center gap-4">
                         <Link
                             to="/login"
-                            className={`px-5 py-2.5 font-medium rounded-xl transition-all ${isScrolled
+                            className={`px-4 py-2 font-medium rounded-xl text-sm transition-all ${isScrolled
                                 ? 'text-neutral-700 hover:bg-neutral-100'
                                 : 'text-white hover:bg-white/10'
                                 }`}
@@ -138,7 +143,7 @@ export default function Header() {
                         </Link>
                         <Link
                             to="/programs"
-                            className="btn btn-primary shadow-lg shadow-primary-500/20"
+                            className="btn btn-primary"
                         >
                             Start Your Journey
                         </Link>
@@ -168,24 +173,24 @@ export default function Header() {
                         style={{ top: 0 }} // Ensure it covers the top
                     >
                         <div className="min-h-screen flex flex-col pt-28 pb-12 px-6">
-                            <div className="flex-1 flex flex-col gap-2">
+                            <div className="flex-1 flex flex-col gap-1">
                                 {navigation.map((item) => (
-                                    <div key={item.label} className="border-b border-neutral-100 last:border-0 pb-2">
+                                    <div key={item.label} className="border-b border-neutral-200 last:border-0 py-4">
                                         <Link
                                             to={item.href}
                                             onClick={() => !item.children && setIsMobileMenuOpen(false)}
-                                            className="block py-4 text-2xl font-display font-bold text-neutral-900"
+                                            className="block text-lg font-semibold text-neutral-900"
                                         >
                                             {item.label}
                                         </Link>
                                         {item.children && (
-                                            <div className="pl-4 space-y-3 mb-4 border-l-2 border-primary-100 ml-2">
+                                            <div className="pl-5 mt-3 space-y-1 border-l-2 border-primary-200 ml-2">
                                                 {item.children.map((child) => (
                                                     <Link
                                                         key={child.href}
                                                         to={child.href}
                                                         onClick={() => setIsMobileMenuOpen(false)}
-                                                        className="block py-2 text-lg text-neutral-600"
+                                                        className="block py-3 px-4 text-[15px] text-neutral-600 leading-relaxed hover:bg-primary-50 rounded-lg transition-colors"
                                                     >
                                                         {child.label}
                                                     </Link>
@@ -196,11 +201,19 @@ export default function Header() {
                                 ))}
                             </div>
 
-                            <div className="mt-8 space-y-4">
-                                <Link to="/login" onClick={() => setIsMobileMenuOpen(false)} className="btn w-full justify-center border-2 border-neutral-200 text-neutral-900">
+                            <div className="mt-10 space-y-3">
+                                <Link
+                                    to="/login"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="btn w-full justify-center border-2 border-neutral-300 text-neutral-800 shadow-sm"
+                                >
                                     Member Login
                                 </Link>
-                                <Link to="/programs" onClick={() => setIsMobileMenuOpen(false)} className="btn btn-primary w-full justify-center text-lg py-4">
+                                <Link
+                                    to="/programs"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="btn btn-primary w-full justify-center"
+                                >
                                     Start Your Journey
                                 </Link>
                             </div>
